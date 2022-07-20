@@ -1,0 +1,150 @@
+*,
+*::before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.border__bottom {
+    border-bottom: .2rem solid rgb(77, 155, 77);
+}
+
+.header {
+    background-color: rgb(166, 229, 166);
+}
+
+.wrapper {
+    width: 90%;
+}
+
+.wrapper--navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 10vh;
+    min-height: 3rem
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation li {
+    list-style-type: none;
+}
+.navigation a:link,
+.navigation a:visited
+{
+    padding: 1rem 1rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    transition: opacity 400ms ease-in-out;
+    
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(196, 240, 196);
+}
+
+.home {
+    height: 90vh;
+}
+
+.wrapper--section {
+    background-color: white;
+    height: 90%;
+    border: .2rem solid rgb(77, 155, 77);
+    border-radius: 2rem;
+    transition: all .5s ease-in-out;
+}
+
+section h1 {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.hide__section {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+
+@media only screen and (max-width: 600px){
+    .wrapper--navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 15vh;
+        min-height: 3rem
+    }
+    
+}
+
+.slider {
+    position: relative;
+    margin: auto;
+    border: 2px solid green;
+    width: 50%;
+    min-height: 400px;
+    
+    transition: trasform 1s ease-in-out;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    transition: trasform 1s ease-in-out;
+}
+
+.left__button,
+.right__button {
+    font-size: 2rem;
+    position: absolute;
+}
+
+.left__button {
+    bottom: 20px;
+    left: 10px;
+}
+
+.right__button {
+    bottom: 20px;
+    right: 10px;
+}
+
+.dots__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid green;
+    width: 20%;
+    height: 25px;
+    position: absolute;
+    bottom: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid green;
+}
+
+.dot--active {
+    background-color: green;
+}
